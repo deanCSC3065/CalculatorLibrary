@@ -7,7 +7,9 @@ import calculator
 
 class TestCalculator:
 
-    def test_multiply(self):
-        assert 4 == calculator.multiply(2, 2)
+    def test_modulus_correct(self):
+        assert 1 == calculator.modulus(10, 3)
+
+        
 
 
