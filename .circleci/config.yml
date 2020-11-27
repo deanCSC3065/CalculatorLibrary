@@ -17,9 +17,12 @@ jobs:
             python -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            pip install flask
+            pip install pytest
       # Step 3: run linter and tests
       - run:
           name: run tests
           command: |
             . venv/bin/activate
-            pytest -v --cov=calculator
+            pytest -v --cov=app_test
+            pytest -v --cov=modulus_test           
